@@ -28,10 +28,8 @@ input() {
 	echo "select your choose [Y/n]: "
 	read -r USR_CHOICE
 	if [[ $USR_CHOICE == [nN] || $USR_CHOICE == [Nn][Oo] ]]; then
-		echo 0
 		return 0
 	else
-		echo 1
 		return 1
 	fi
 }
@@ -158,29 +156,6 @@ if [ "$choose" -eq "1" ]; then
 	choose=$?
 	if [ "$choose" -eq "1" ]; then
 		git clone --depth 1 ${git_prefix_url}wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-	fi
-fi
-
-# 编译nodejs,插件coc需要nodejs的功能
-# 安装nodejs, 插件coc.vim会用到这个软件
-cd ~
-
-echo "Y - Install Node, N - skip"
-echo "Please Choose your Environment:"
-input
-choose=$?
-if [ "$choose" -eq "1" ]; then
-	if [ ! -e "node-v14.17.1-linux-x64.tar.xz" ]; then
-		echo "Downloading node-v14.17.1 Install Package."
-		wget https://nodejs.org/dist/v14.17.1/node-v14.17.1-linux-x64.tar.xz
-	fi
-
-	if [ ! -e "/usr/local/bin/node" ]; then
-		tar -xf node-v14.17.1-linux-x64.tar.xz
-		echo "installing nodejs"
-		sudo cp -rf node-v14.17.1-linux-x64/bin/* /usr/local/bin
-		sudo cp -rf node-v14.17.1-linux-x64/share/* /usr/local/share
-		sudo cp -rf node-v14.17.1-linux-x64/lib/* /usr/local/lib
 	fi
 fi
 
