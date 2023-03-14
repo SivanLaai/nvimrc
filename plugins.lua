@@ -49,10 +49,27 @@ local plugins = {
   -- },
 
   -- Uncomment if you want to re-enable which-key
-  -- {
-  --   "folke/which-key.nvim",
-  --   enabled = true,
-  -- },
+  {
+    "folke/which-key.nvim",
+    enabled = true,
+  },
+  -- Spectre Replace and Find
+  {
+    lazy = false,
+    "nvim-pack/nvim-spectre",
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+      },
+    },
+    opts = function()
+      return require("custom.configs.spectre")
+    end,
+    config = function(_, opts)
+      require("spectre").setup(opts)
+      -- require "custom.configs.spectre"
+    end,
+  },
 }
 
 return plugins
