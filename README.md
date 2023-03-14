@@ -5,9 +5,7 @@
 ## Ubuntu安装方式
 ```bash
 # 可在内部选择对应的版本
-git clone https://github.com/SivanLaai/nvim.git
-./install.sh
-#TODO: 安装完成记得进入vim更新插件
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/SivanLaai/nvimrc/HEAD/install.sh)"
 ```
 
 ## windows
@@ -60,7 +58,8 @@ pacman -Rs mingw-w64-clang-x86_64-toolchain
 #### 9.复制配置文件
 - NeoVim-qt
 ```
-cp -rf nvim/* ~/AppData/Local/nvim
+git clone https://github.com/NvChad/NvChad %HOMEPATH%\AppData\Local\nvim --depth 1
+git clone https://github.com/SivanLaai/nvimrc %HOMEPATH%\AppData\Local\nvim\lua\custom
 ```
 #### 10.配置vim
 ```zsh
