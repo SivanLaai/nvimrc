@@ -148,10 +148,9 @@ if [ "$choose" -eq "1" ]; then
 	choose=$?
 	if [ "$choose" -eq "1" ]; then
 		sudo apt-get install ripgrep #fd
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+    git clone ${git_prefix_url}NvChad/NvChad ${DEST_DIR} --depth 1
 		mkdir -p ${DEST_DIR}
-		cd ~/nvimrc
-		cp -rf ~/nvimrc ${DEST_DIR}/lua/custom
+    git clone ${git_prefix_url}SivanLaai/nvimrc ${DEST_DIR}/lua/custom
     nvim
 	fi
 	echo "Y - install packer.nvim, N - Skip"
@@ -253,5 +252,3 @@ if [ ! -n "$output" ]; then
 	echo 'alias tmux="tmux -2"' >>~/.zshenv
 	echo 'source ~/.zshenv' >>~/.zshrc
 fi
-
-echo "nvim +PackerSync"
