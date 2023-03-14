@@ -68,4 +68,4 @@ cp -rf nvim/* ~/AppData/Local/nvim
 ```
 
 # Reference
-- [nvimdots](https://github.com/ayamir/nvimdots)
+- [example_config](https://github.com/NvChad/example_config)
