@@ -55,7 +55,7 @@ local plugins = {
   },
   -- Spectre Replace and Find
   {
-    lazy = false,
+    lazy = true,
     "nvim-pack/nvim-spectre",
     dependencies = {
       {
@@ -68,6 +68,17 @@ local plugins = {
     config = function(_, opts)
       require("spectre").setup(opts)
       -- require "custom.configs.spectre"
+    end,
+  },
+  {
+    "NvChad/nvterm",
+    init = require("core.utils").load_mappings "nvterm",
+    opts = function()
+      return require("custom.configs.nvterm")
+    end,
+    config = function(_, opts)
+      require "base46.term"
+      require("nvterm").setup(opts)
     end,
   },
 }
