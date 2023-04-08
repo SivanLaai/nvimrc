@@ -151,12 +151,6 @@ if [ "$choose" -eq "1" ]; then
     git clone ${git_prefix_url}SivanLaai/nvimrc ${DEST_DIR}/lua/custom
     nvim
 	fi
-	echo "Y - install packer.nvim, N - Skip"
-	input
-	choose=$?
-	if [ "$choose" -eq "1" ]; then
-		git clone --depth 1 ${git_prefix_url}wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-	fi
 fi
 
 #添加环境变量
