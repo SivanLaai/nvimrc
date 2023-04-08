@@ -16,10 +16,17 @@ dap.configurations.cpp = {
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
     args = function()
-      return {vim.fn.input('Parameters to executable: ', vim.fn.getcwd() .. '/', 'file')}
+      return {vim.fn.input('Parameters to executable: ', '')}
     end,
     cwd = '${workspaceFolder}',
-    stopAtEntry = true,
+    stopAtEntry = false,
+    setupCommands = {
+      {
+         text = '-enable-pretty-printing',
+         description =  'enable pretty printing',
+         ignoreFailures = true,
+      },
+    },
   },
   {
     name = 'Attach to gdbserver :1234',
@@ -30,10 +37,17 @@ dap.configurations.cpp = {
     miDebuggerPath = '/usr/bin/gdb',
     cwd = '${workspaceFolder}',
     args = function()
-      return {vim.fn.input('Parameters to executable: ', vim.fn.getcwd() .. '/', 'file')}
+      return {vim.fn.input('Parameters to executable: ', '')}
     end,
     program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      return {vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')}
     end,
+    setupCommands = {
+      {
+         text = '-enable-pretty-printing',
+         description =  'enable pretty printing',
+         ignoreFailures = true,
+      },
+    },
   },
 }
