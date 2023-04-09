@@ -9,14 +9,34 @@ dap.adapters.cppdbg = {
 }
 dap.configurations.cpp = {
   {
-    name = "Launch file",
+    name = "Debug Run",
     type = "cppdbg",
     request = "launch",
     program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      return "/home/ccip/anaconda3/bin/python" --'Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
     args = function()
-      return {vim.fn.input('Parameters to executable: ', '')}
+      return {"/home/ccip/.data/dreamplace/Placer.py","/home/ccip/.data/test/ispd2005/lpabs/adaptec1.json"}
+    end,
+    cwd = '${workspaceFolder}',
+    stopAtEntry = false,
+    setupCommands = {
+      {
+         text = '-enable-pretty-printing',
+         description =  'enable pretty printing',
+         ignoreFailures = true,
+      },
+    },
+  },
+  {
+    name = "Launch program",
+    type = "cppdbg",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Executable Path: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    args = function()
+      return {vim.fn.input('Parameters1: ', ''), vim.fn.input('Parameters2: ', '')}
     end,
     cwd = '${workspaceFolder}',
     stopAtEntry = false,
@@ -37,10 +57,10 @@ dap.configurations.cpp = {
     miDebuggerPath = '/usr/bin/gdb',
     cwd = '${workspaceFolder}',
     args = function()
-      return {vim.fn.input('Parameters to executable: ', '')}
+      return {vim.fn.input('Parameters: ', '')}
     end,
     program = function()
-      return {vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')}
+      return {vim.fn.input('Executable Path: ', vim.fn.getcwd() .. '/', 'file')}
     end,
     setupCommands = {
       {
