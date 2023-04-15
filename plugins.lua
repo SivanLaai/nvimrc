@@ -81,6 +81,18 @@ local plugins = {
       require("nvterm").setup(opts)
     end,
   },
+  {
+    lazy = false,
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      {
+        "mfussenegger/nvim-dap",
+        config = function()
+          return require("custom.configs.dap.init")
+        end,
+      },
+    },
+  },
 }
 
 return plugins

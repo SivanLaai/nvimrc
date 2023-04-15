@@ -5,4 +5,5 @@
 --  pattern = "*",
 --  command = "tabdo wincmd =",
 --})
-
+local g = vim.g
+g.mapleader = ","
