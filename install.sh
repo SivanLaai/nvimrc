@@ -227,3 +227,6 @@ if [ ! -n "$output" ]; then
 	echo 'alias tmux="tmux -2"' >>~/.zshenv
 	echo 'source ~/.zshenv' >>~/.zshrc
 fi
+
+# 激活nvim-gui
+#echo "set guifont=Hack\ NFM:h12"
