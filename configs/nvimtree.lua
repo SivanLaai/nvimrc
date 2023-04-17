@@ -1,5 +1,5 @@
 local options = {
-  sync_root_with_cwd = true,
+  --sync_root_with_cwd = true,
 }
 
 local function open_nvim_tree(data)
@@ -12,11 +12,10 @@ local function open_nvim_tree(data)
 
   -- change to the directory
   vim.cmd.cd(data.file)
-  -- open NvDashboard
-  vim.cmd("Nvdash")
 
   -- open the tree
-  --require("nvim-tree.api").tree.open()
+  require("nvim-tree.api").tree.open()
+  
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
