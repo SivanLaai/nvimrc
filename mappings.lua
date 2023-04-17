@@ -25,21 +25,35 @@ M.Debug = {
   },
 }
 
---M.nvterm = {
---  plugin = true,
---
---
---  n = {
---    -- new
---    ["<leader>h"] = {
---      "",
---    },
---
---    ["<leader>v"] = {
---      "",
---    },
---  },
---}
+M.Vimtex = {
+  n = {
+    -- spectre
+    ["<leader>lc"] = { ":VimtexCompile<CR>", "Vimtex: compile tex file" },
+    ["<leader>lv"] = { ":VimtexView<CR>", "Vimtex: view latex pdf file" },
+  },
+}
+M.nvterm = {
+  plugin = true,
+
+  n = {
+    -- new
+    ["<leader>h"] = {
+      "",
+    },
+
+    ["<leader>v"] = {
+      "",
+    },
+  },
+}
+M.telescope = {
+
+  n = {
+    -- new
+    ["<leader>fp"] = { ":Telescope projects<CR>", "Telescope: Find Projects"},
+
+  },
+}
 
 -- more keybinds!
 

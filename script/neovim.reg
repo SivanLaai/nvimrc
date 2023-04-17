@@ -5,20 +5,20 @@ Windows Registry Editor Version 5.00
   00,46,00,69,00,6c,00,65,00,73,00,5c,00,4e,00,65,00,6f,00,76,00,69,00,6d,00,\
   5c,00,62,00,69,00,6e,00,5c,00,6e,00,76,00,69,00,6d,00,2d,00,71,00,74,00,2e,\
   00,65,00,78,00,65,00,00,00
-@="通过 Neovim 打开"
+@="Open Neovim here"
 
 [HKEY_CLASSES_ROOT\Directory\shell\Neovim\command]
-@="D:\\Program Files\\Neovim\\bin\\nvim-qt.exe"
+@="\"D:\\Program Files\\Neovim\\bin\\nvim-qt.exe\" \"%V\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Neovim]
 "Icon"=hex(2):44,00,3a,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,20,\
   00,46,00,69,00,6c,00,65,00,73,00,5c,00,4e,00,65,00,6f,00,76,00,69,00,6d,00,\
   5c,00,62,00,69,00,6e,00,5c,00,6e,00,76,00,69,00,6d,00,2d,00,71,00,74,00,2e,\
   00,65,00,78,00,65,00,00,00
-@="通过 Neovim 打开"
+@="Open Neovim here"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Neovim\command]
-@="D:\\Program Files\\Neovim\\bin\\nvim-qt.exe"
+@="\"D:\\Program Files\\Neovim\\bin\\nvim-qt.exe\" \"%V\""
 
 
 [HKEY_CLASSES_ROOT\*\shell\Neovim]
@@ -26,9 +26,8 @@ Windows Registry Editor Version 5.00
   00,46,00,69,00,6c,00,65,00,73,00,5c,00,4e,00,65,00,6f,00,76,00,69,00,6d,00,\
   5c,00,62,00,69,00,6e,00,5c,00,6e,00,76,00,69,00,6d,00,2d,00,71,00,74,00,2e,\
   00,65,00,78,00,65,00,00,00
-@="通过 Neovim 打开"
+@="Open Neovim here"
 
 [HKEY_CLASSES_ROOT\*\shell\Neovim\command]
-@="D:\\Program Files\\Neovim\\bin\\nvim-qt.exe"
-
+@="\"D:\\Program Files\\Neovim\\bin\\nvim-qt.exe\" \"%1\""
 

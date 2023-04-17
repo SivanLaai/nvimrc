@@ -70,6 +70,7 @@ local plugins = {
       -- require "custom.configs.spectre"
     end,
   },
+  -- term
   {
     "NvChad/nvterm",
     init = require("core.utils").load_mappings "nvterm",
@@ -81,6 +82,7 @@ local plugins = {
       require("nvterm").setup(opts)
     end,
   },
+  -- Debug 
   {
     lazy = false,
     "rcarriga/nvim-dap-ui",
@@ -93,6 +95,37 @@ local plugins = {
       },
     },
   },
+  -- Latex
+  {
+    lazy = false,
+    "lervag/vimtex",
+    init = function()
+      require("custom.configs.vimtex")
+    end,
+  },
+  -- Project Management
+  {
+    lazy = false,
+    "ahmedkhalf/project.nvim",
+    opts = function()
+      return require("custom.configs.project")
+    end,
+    dependencies = {
+      {
+        "nvim-tree/nvim-tree.lua",
+        opts = function()
+          return require("custom.configs.nvimtree")
+        end,
+        config = function(_, opts)
+          return require("nvim-tree").setup(opts)
+        end,
+      },
+    },
+    config = function(_, opts)
+      require("project_nvim").setup(opts)
+    end,
+  },
+
 }
 
 return plugins
