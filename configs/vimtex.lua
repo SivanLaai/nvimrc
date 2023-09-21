@@ -20,6 +20,8 @@ if g.is_mac then
         let l:src_file_path = expand('%:p')
         let l:cmd = [g:vimtex_view_general_viewer, '-r']
 
+        let l:cmd = [g:vimtex_view_general_viewer, '-r']
+
         if !empty(system('pgrep Skim'))
           call extend(l:cmd, ['-g'])
         endif
@@ -29,6 +31,8 @@ if g.is_mac then
   ]])
 end
 g.vimtex_quickfix_open_on_warning = 0
+--g.vimtex_compiler_method = 'latexrun'
+--g.vimtex_compiler_method = 'latexmk'
 g.vimtex_compiler_latexmk = {
     build_dir= "build"
 }

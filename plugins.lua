@@ -4,7 +4,13 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   -- Override plugin definition options
-
+  {
+    lazy = false,
+    "jakewvincent/texmagic.nvim",
+    config = function()
+      require("custom.configs.texmagic")
+    end,
+  },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -90,19 +96,19 @@ local plugins = {
       {
         "mfussenegger/nvim-dap",
         config = function()
-          return require("custom.configs.dap.init")
+          require("custom.configs.dap.init")
         end,
       },
     },
   },
   -- Latex
-  {
-    lazy = false,
-    "lervag/vimtex",
-    init = function()
-      require("custom.configs.vimtex")
-    end,
-  },
+  --{
+  --  lazy = false,
+  --  "lervag/vimtex",
+  --  init = function()
+  --    require("custom.configs.vimtex")
+  --  end,
+  --},
   -- Project Management
   {
     lazy = false,
