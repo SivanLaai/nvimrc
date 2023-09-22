@@ -101,7 +101,7 @@ local plugins = {
       },
     },
   },
-  -- Latex
+  ---- Latex
   --{
   --  lazy = false,
   --  "lervag/vimtex",
