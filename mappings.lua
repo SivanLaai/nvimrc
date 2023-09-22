@@ -27,8 +27,8 @@ M.Debug = {
 
 M.Texlab = {
   n = {
-    ["<leader>tc"] = { ":TexlabBuild<CR>", "Texlab: compile tex file" },
-    ["<leader>tv"] = { ":TexlabForward<CR>", "Texlab: view latex pdf file" },
+    ["<leader>lc"] = { ":TexlabBuild<CR>", "Texlab: compile tex file" },
+    ["<leader>lv"] = { ":TexlabForward<CR>", "Texlab: view latex pdf file" },
   },
 }
 M.nvterm = {
