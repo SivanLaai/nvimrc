@@ -1,5 +1,7 @@
 local g = vim.g
 
+g.vimtex_mappings_enabled = 1
+
 if g.is_win then
   g.vimtex_view_general_viewer = 'SumatraPDF'
   g.vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
@@ -20,6 +22,8 @@ if g.is_mac then
         let l:src_file_path = expand('%:p')
         let l:cmd = [g:vimtex_view_general_viewer, '-r']
 
+        let l:cmd = [g:vimtex_view_general_viewer, '-r']
+
         if !empty(system('pgrep Skim'))
           call extend(l:cmd, ['-g'])
         endif
@@ -29,8 +33,17 @@ if g.is_mac then
   ]])
 end
 g.vimtex_quickfix_open_on_warning = 0
+--g.vimtex_compiler_method = 'latexrun'
+--g.vimtex_compiler_method = 'latexmk'
 g.vimtex_compiler_latexmk = {
-    build_dir= "build"
+    build_dir= "build",
+    options= {
+      '-verbose',
+      '-file-line-error',
+      '-synctex=1',
+      '-interaction=nonstopmode',
+      "-bibfudge-",
+    }
 }
 -- TOC settings
 g.vimtex_toc_config = {

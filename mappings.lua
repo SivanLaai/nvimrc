@@ -25,11 +25,10 @@ M.Debug = {
   },
 }
 
-M.Vimtex = {
+M.Texlab = {
   n = {
-    -- spectre
-    ["<leader>lc"] = { ":VimtexCompile<CR>", "Vimtex: compile tex file" },
-    ["<leader>lv"] = { ":VimtexView<CR>", "Vimtex: view latex pdf file" },
+    ["<leader>lc"] = { ":TexlabBuild<CR>", "Texlab: compile tex file" },
+    ["<leader>lv"] = { ":TexlabForward<CR>", "Texlab: view latex pdf file" },
   },
 }
 M.nvterm = {
