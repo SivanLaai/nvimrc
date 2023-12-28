@@ -95,6 +95,11 @@ local plugins = {
       },
     },
   },
+  -- Transparent
+  {
+    lazy = false,
+    "tribela/vim-transparent",
+  },
   -- Latex
   {
     lazy = false,
