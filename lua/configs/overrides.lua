@@ -50,5 +50,6 @@ M.nvimtree = {
     },
   },
 }
+M.lspservers = { "html", "cssls", "tsserver", "pyright", "clangd", "texlab"}
 
 return M
