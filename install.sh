@@ -146,9 +146,7 @@ if [ "$choose" -eq "1" ]; then
 	choose=$?
 	if [ "$choose" -eq "1" ]; then
 		sudo apt-get install ripgrep #fd
-    git clone ${git_prefix_url}NvChad/NvChad ${DEST_DIR} --depth 1
-		mkdir -p ${DEST_DIR}
-    git clone ${git_prefix_url}SivanLaai/nvimrc ${DEST_DIR}/lua/custom
+    git clone ${git_prefix_url}SivanLaai/nvimrc ${DEST_DIR}
     nvim
 	fi
 fi
