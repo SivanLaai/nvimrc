@@ -1,6 +1,10 @@
 local overrides = require("configs.overrides")
 return {
   {
+    lazy = false,
+    "equalsraf/neovim-gui-shim"
+  },
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     config = function()
