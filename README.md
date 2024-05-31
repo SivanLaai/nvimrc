@@ -58,8 +58,7 @@ pacman -Rs mingw-w64-clang-x86_64-toolchain
 #### 9.复制配置文件
 - NeoVim-qt
 ```
-git clone https://github.com/NvChad/NvChad %HOMEPATH%\AppData\Local\nvim --depth 1
-git clone https://github.com/SivanLaai/nvimrc %HOMEPATH%\AppData\Local\nvim\lua\custom
+git clone https://github.com/SivanLaai/nvimrc %HOMEPATH%\AppData\Local\nvim
 ```
 #### 10.配置vim
 ```zsh
